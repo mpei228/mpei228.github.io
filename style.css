@@ -10,3 +10,10 @@ h1 {
         margin-top: 20px;
 	font-size: 3rem;
 }
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: #000000;
+    margin: 20px 0;
+}
