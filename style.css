@@ -42,9 +42,9 @@ nav {
 nav a {
     text-decoration: none; /* Убирает подчеркивание у ссылок */
     color: black;
-    font-size: 20px;
+    font-size: 18px;
 	transition: color 0.3s ease; /* Скорость смены цвета */
-	margin: 0 15px;
+	margin: 0 12px;
 	padding: 0;
 }
 
