@@ -1,50 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-	<!--head - настройки страницы (невидимая часть)-->
-	<head>
-    	<meta charset="UTF-8" />
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    	<title>Главная</title>
-		<!--кастомные иконки-->
-		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-		<link rel="manifest" href="favicons/site.webmanifest">
-		<!--стили css-->
-		<link rel="stylesheet" href="style.css" />
-		<!--кастомные шрифты-->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
-  	</head>
-  	<!--body - контент страницы (видимая часть)-->
-  	<body>
-    	<header id="top">
-			 <h1>xFRANT</h1>
-		</header>
-		
-		<nav id="menu">
-			<a href="#games">ИГРЫ</a>
-			<a href="#study">УЧЁБА</a>
-			<a href="#about">О САЙТЕ</a>
-			<a href="#top" class="special">xFRANT</a>
-		</nav>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-		<!--скрипты js-->
-		<script src="./script.js"></script>
-		
-		<section id="games">
-			<h2>Игры</h2>
-			<p>Контент для игр</p>
-		</section><hr>
-		<section id="study">
-			<h2>Учеба</h2>
-			<p>Контент для учебы</p>
-		</section><hr>
-		<section id="about">
-			<h2>О сайте</h2>
-			<p>Контент о сайте</p>
-		</section><hr>
+html {
+    scroll-behavior: smooth;
+}
 
-  	</body>
-</html>
+body {
+	background-color: olivedrab;
+}
+        
+h1 {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+   	font-style: normal;
+	text-align: center;
+	padding-top: 14px;
+	font-size: 3.5rem;
+}
+
+hr {
+    border: none;
+    height: 6px;
+    background-color: black;
+}
+
+nav {
+    text-align: center;
+	font-family: sans-serif, serif;
+	padding: 10px 0;
+	height: 50px;
+	position: relative; /* Относительное положение до прокрутки */
+	color: black;
+	background-color: darkolivegreen;
+	transition: all 0.3s ease; /* Плавный переход при закреплении */
+	z-index: 1000;
+}
+
+nav a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    color: black;
+    font-size: 20px;
+	transition: color 0.3s ease; /* Скорость смены цвета */
+	margin: 0 15px;
+	padding: 0;
+}
+
+.special {
+	font-family: "Kumar One", serif;
+	font-style: normal;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: white; /* Цвет текста при наведении */
+}
+
+nav.fixed {
+	position: fixed; /* Закрепляем меню при прокрутке */
+	top: 0;
+	width: 100%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+	padding: 100px 20px;
+	height: 100vh;
+}
+
+section::before {
+    content: ""; /* Создаем пустой псевдоэлемент */
+    display: block;
+    height: 50px; /* Высота псевдоэлемента равна высоте меню */
+    margin-top: -50px; /* Поднимаем секцию вверх */
+}
