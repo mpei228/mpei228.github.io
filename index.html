@@ -2,9 +2,9 @@
 <html lang="en">
 	<!--head - настройки страницы (невидимая часть)-->
 	<head>
-    		<meta charset="UTF-8" />
-    		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    		<title>Главная</title>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<title>Главная</title>
 		<!--кастомные иконки-->
 		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -19,7 +19,32 @@
   	</head>
   	<!--body - контент страницы (видимая часть)-->
   	<body>
-    		<div><h1>xFRANT</h1></div>
-		<hr>
+    	<header id="top">
+			 <h1>xFRANT</h1>
+		</header>
+		
+		<nav id="menu">
+			<a href="#games">ИГРЫ</a>
+			<a href="#study">УЧЁБА</a>
+			<a href="#about">О САЙТЕ</a>
+			<a href="#top" class="special">xFRANT</a>
+		</nav>
+
+		<!--скрипты js-->
+		<script src="./script.js"></script>
+		
+		<section id="games">
+			<h2>Игры</h2>
+			<p>Контент для игр</p>
+		</section><hr>
+		<section id="study">
+			<h2>Учеба</h2>
+			<p>Контент для учебы</p>
+		</section><hr>
+		<section id="about">
+			<h2>О сайте</h2>
+			<p>Контент о сайте</p>
+		</section><hr>
+
   	</body>
 </html>
